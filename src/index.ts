@@ -5,11 +5,11 @@ module.exports.initializer = function(context, callback) {
   callback(null, '');
 };
 */
-import config from './config';
-
 const OSS = require('ali-oss');
 const axios = require('axios').default;
 const FileNameExpert = require('file-name-expert').default;
+
+const config = require('./config.ts')
 
 async function uploadToOss(context, stream, fileName) {
   let client = new OSS({
@@ -44,7 +44,7 @@ export const handler = async (request, response, context) => {
   response.send(JSON.stringify({
     message: 'hello world, from typescript',
     ...request.queries,
-    sourceFileUrl,
+    fileFullName,
     ossFileLink
   }));
 };
