@@ -2,16 +2,20 @@
   "name": "ali-fc-typescript-skeleton",
   "version": "1.0.0",
   "scripts": {
-    "test": "mocha --require espower-typescript/guess \"test/**/*.test.ts\"",
+    "test": "mocha --require espower-typescript/guess \"test/**/*.test.ts\" --timeout=60000",
+    "generate-template": "mocha --require espower-typescript/guess \"test/generate-template.ts\"",
     "dev": "webpack --config webpack.dev.js",
+    "sed": "bash -c \"sed -e \"s/\\${OSS_REGION}/${OSS_REGION}/\" -e \"s/\\${OSS_BUCKET}/${OSS_BUCKET}/\" -e \"s/\\${OSS_ACCESS_KEY_ID}/${OSS_ACCESS_KEY_ID}/\" -e \"s/\\${OSS_ACCESS_KEY_SECRET}/${OSS_ACCESS_KEY_SECRET}/\" -e \"s/\\${OSS_STS_TOKEN}/${OSS_STS_TOKEN}/\" template.yml.tpl\"",
     "build": "webpack --config webpack.prod.js",
     "local": "fun local invoke demo/demo",
-    "encrypt-env:windows": "(certutil.exe -encodehex .env env 1 && type env | clip.exe) && del env"
+    "encrypt-env:windows": "(certutil.exe -encodehex .env env 1 && type env | clip.exe) && del env",
+    "deploy": "npm run generate-template&&fun deploy"
   },
   "description": "",
   "devDependencies": {
+    "@types/fs-extra": "^8.0.1",
     "@types/mocha": "^5.2.7",
-    "@types/node": "^12.7.8",
+    "@types/node": "^12.12.27",
     "awesome-typescript-loader": "^5.2.1",
     "babel-core": "^6.26.3",
     "babel-loader": "7",
@@ -25,5 +29,12 @@
     "webpack-merge": "^4.2.1"
   },
   "author": "jeff.tian@outlook.com",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "ali-oss": "^6.5.1",
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "file-name-expert": "^1.0.1",
+    "ramda": "^0.27.0"
+  }
 }

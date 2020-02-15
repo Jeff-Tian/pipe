@@ -13,3 +13,4 @@ jdt.ls-java-project
 .Trash-*
 .env
 dist
+template.yml

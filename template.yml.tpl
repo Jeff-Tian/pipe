@@ -12,6 +12,12 @@ Resources:
         Runtime: nodejs8
         CodeUri: "./dist"
         Timeout: 600
+        EnvironmentVariables:
+          OSS_REGION: ${OSS_REGION}
+          OSS_BUCKET: ${OSS_BUCKET}
+          OSS_ACCESS_KEY_ID: ${OSS_ACCESS_KEY_ID}
+          OSS_ACCESS_KEY_SECRET: ${OSS_ACCESS_KEY_SECRET}
+          OSS_STS_TOKEN: ${OSS_STS_TOKEN}
       Events:
         http-trigger:
           Type: HTTP
