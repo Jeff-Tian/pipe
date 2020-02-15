@@ -2,6 +2,8 @@
 
 > 阿里云函数计算版管道。
 
+[![Build Status](https://travis-ci.com/Jeff-Tian/pipe.svg?branch=master)](https://travis-ci.com/Jeff-Tian/pipe)
+
 **本项目使用 [ali-fc-typescript-skeleton](https://github.com/Jeff-Tian/ali-fc-typescript-skeleton) 创建**
 
 ## 特性
