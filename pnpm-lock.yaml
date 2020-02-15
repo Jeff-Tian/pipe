@@ -2,7 +2,7 @@ dependencies:
   ali-oss: 6.5.1
   axios: 0.19.2
   dotenv: 8.2.0
-  file-name-expert: 1.0.1
+  file-name-expert: 1.1.0
   ramda: 0.27.0
 devDependencies:
   '@types/fs-extra': 8.0.1
@@ -2300,13 +2300,13 @@ packages:
     resolution:
       integrity: sha1-hiRwESkBxyeg5JWoB0S9W6odZ5A=
       tarball: figgy-pudding/download/figgy-pudding-3.5.1.tgz
-  /file-name-expert/1.0.1:
+  /file-name-expert/1.1.0:
     dependencies:
       ramda: 0.27.0
     dev: false
     resolution:
-      integrity: sha1-NCzReAU8gouGEy0O63zBPjP8ouM=
-      tarball: file-name-expert/download/file-name-expert-1.0.1.tgz
+      integrity: sha1-SArMAgbtwMWYPII5FW6T8O0RhQU=
+      tarball: file-name-expert/download/file-name-expert-1.1.0.tgz?cache=0&sync_timestamp=1581773493066&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ffile-name-expert%2Fdownload%2Ffile-name-expert-1.1.0.tgz
   /file-uri-to-path/1.0.0:
     resolution:
       integrity: sha1-VTp7hEb/b2hDWcRF8eN6BdrMM90=
@@ -5680,7 +5680,7 @@ specifiers:
   babel-preset-env: ^1.7.0
   dotenv: ^8.2.0
   espower-typescript: ^9.0.2
-  file-name-expert: ^1.0.1
+  file-name-expert: ^1.1.0
   mocha: ^6.2.0
   power-assert: ^1.6.1
   ramda: ^0.27.0

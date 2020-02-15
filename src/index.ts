@@ -32,13 +32,13 @@ export const handler = async (request, response, context) => {
   const sourceFileUrl = encodeURI(decodeURIComponent(request.queries.file));
   console.log('hello world, from typescript');
 
-  const fileName = FileNameExpert.getFileNameFromUrl(sourceFileUrl);
+  const fileFullName = FileNameExpert.getFileFullNameFromUrl(sourceFileUrl);
   const { data } = await axios({
     method: 'get',
     url: sourceFileUrl,
     responseType: 'stream'
   })
-  const ossFileLink = await uploadToOss(context, data, '/pipe/' + fileName)
+  const ossFileLink = await uploadToOss(context, data, '/pipe/' + fileFullName)
 
   response.setStatusCode(200);
   response.send(JSON.stringify({

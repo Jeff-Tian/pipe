@@ -17,5 +17,5 @@ jobs:
       deploy:
         provider: script
         skip_cleanup: true
-        script: "ls -all .&&fun deploy"
+        script: "ls -all .&&npm run deploy"
         branch: master
