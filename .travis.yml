@@ -5,6 +5,7 @@ before_install:
   - npm i -g @alicloud/fun -g
 install:
   - echo "$ENV" | base64 --decode > .env
+  - ls -all .
   - npm i
 script: npm test && npm run build
 
@@ -16,6 +17,5 @@ jobs:
       deploy:
         provider: script
         skip_cleanup: true
-        script:
-          - fun deploy
+        script: "ls -all .&&fun deploy"
         branch: master
