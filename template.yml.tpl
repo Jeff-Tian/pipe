@@ -1,11 +1,11 @@
 ROSTemplateFormatVersion: "2015-09-01"
 Transform: "Aliyun::Serverless-2018-04-03"
 Resources:
-  demo: # service name
+  pipe: # service name
     Type: "Aliyun::Serverless::Service"
     Properties:
       Description: "The code is transferred from es6 to es5 and packaged as a single file"
-    demo: # function name
+    file: # function name
       Type: "Aliyun::Serverless::Function"
       Properties:
         Handler: index.handler

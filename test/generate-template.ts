@@ -10,7 +10,7 @@ describe('generate template', () => {
 
         let template = fs.readFileSync(templatePath, 'utf-8');
         template = template.replace(/\$\{([^${}]+)\}/g, (match, g1) => {
-            return config[g1];
+            return config[g1] || "";
         });
         fs.writeFileSync(ymlPath, template);
 
