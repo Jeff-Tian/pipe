@@ -12,6 +12,7 @@ Resources:
         Runtime: nodejs8
         CodeUri: "./dist"
         Timeout: 600
+        MemorySize: 2048
         EnvironmentVariables:
           OSS_REGION: ${OSS_REGION}
           OSS_BUCKET: ${OSS_BUCKET}
